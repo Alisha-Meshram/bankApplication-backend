@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 import cors from 'cors'
 import { authRoutes } from './routes/auth.routes.js';
 import { transactionRoutes } from './routes/Transaction.routes.js';
-import { UserRoutes } from './routes/User.routes.js';
+import { UserRoutes } from './routes/user.routes.js';
 
 const app=express()
 dotenv.config()
