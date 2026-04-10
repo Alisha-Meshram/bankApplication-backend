@@ -9,7 +9,10 @@ import { UserRoutes } from './routes/user.routes.js';
 const app=express()
 dotenv.config()
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: 'https://bankapplicaton.vercel.app',
+    credentials: true
+  }));
 app.use('/api/auth',authRoutes)
 app.use('/api/transaction',transactionRoutes)
 app.use('/api/user',UserRoutes)
