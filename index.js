@@ -15,7 +15,7 @@ app.use('/api/transaction',transactionRoutes)
 app.use('/api/user',UserRoutes)
 ConnectDatabase()
 
-const port=7000;
+const port=process.env.PORT|| 5000;
 app.listen(port,()=>{
 console.log(`server is run ${port}`)
 })
